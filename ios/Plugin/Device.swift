@@ -163,8 +163,8 @@ class Device: NSObject, CBPeripheralDelegate {
     }
 
     private func getKey(_ prefix: String, _ characteristic: CBCharacteristic) -> String {
-        var serviceUUIDString = characteristic.service.uuid.uuidString
-        if serviceUUIDString.count == 4 {
+        var serviceUUIDString = characteristic.service?.uuid.uuidString
+        if serviceUUIDString!.count == 4 {
             serviceUUIDString = "0000\(serviceUUIDString)-0000-1000-8000-00805F9B34FB"
         }
         var characteristicUUIDString = characteristic.uuid.uuidString
