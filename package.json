@@ -27,7 +27,8 @@
     "release": "standard-version",
     "release:minor": "standard-version -r minor",
     "release:major": "standard-version -r major",
-    "publish:dev": "npm publish --tag dev"
+    "publish:dev": "npm publish --tag dev",
+    "prepare": "npm run build"
   },
   "author": "pwespi",
   "license": "MIT",
